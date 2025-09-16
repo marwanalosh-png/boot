@@ -1,0 +1,36 @@
+﻿name: Build Android APK
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+          cache: true
+      - name: Create android and deps
+        run: |
+          if [ ! -d android ]; then flutter create .; fi
+          flutter pub get
+          flutter gen-l10n || true
+      - name: Build APK
+        run: |
+          flutter build apk -t lib/main.dart --release
+          mkdir -p dist
+          cp build/app/outputs/flutter-apk/app-release.apk dist/boot-coin-mooroo-release.apk
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: boot-coin-mooroo-apk
+          path: dist/boot-coin-mooroo-release.apk

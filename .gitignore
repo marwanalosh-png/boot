@@ -1,0 +1,24 @@
+﻿# Flutter/Dart/Pub
+.dart_tool/
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.melos_tool/
+.pub/
+build/
+coverage/
+
+# Android
+**/android/.gradle/
+**/android/local.properties
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+
+# IDE/editor
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
