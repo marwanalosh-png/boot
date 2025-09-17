@@ -1,7 +1,15 @@
 ﻿{
   "@@locale": "ar",
-  "appTitle": "تطبيقي للأندرويد",
+  "appTitle": "بوت كوين مورّو",
   "switchLanguage": "تبديل اللغة",
   "homeTitle": "الرئيسية",
-  "homeBody": "تطبيق أندرويد جديد جاهز"
+  "homeBody": "التطبيق جاهز",
+  "dashboardTitle": "لوحة التحكم",
+  "statusRunning": "قيد التشغيل",
+  "statusStopped": "متوقف",
+  "start": "تشغيل",
+  "stop": "إيقاف",
+  "events": "الأحداث",
+  "settings": "الإعدادات",
+  "botUrl": "عنوان الخادم"
 }

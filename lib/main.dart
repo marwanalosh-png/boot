@@ -1,7 +1,8 @@
 ﻿import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'core/locale_controller.dart';
+
+import 'dashboard.dart';
 
 void main() {
   runApp(ChangeNotifierProvider(create: (_) => LocaleController(), child: const MyApp()));
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       locale: locale,
       theme: ThemeData(useMaterial3: true, colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue)),
-      home: const HomeScreen(),
+      home: const DashboardScreen(),
     );
   }
 }
@@ -40,3 +41,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+

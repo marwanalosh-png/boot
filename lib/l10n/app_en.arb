@@ -1,7 +1,15 @@
 ﻿{
   "@@locale": "en",
-  "appTitle": "My Android App",
+  "appTitle": "Boot Coin Mooroo",
   "switchLanguage": "Switch language",
   "homeTitle": "Home",
-  "homeBody": "Your new Android app is ready"
+  "homeBody": "App ready",
+  "dashboardTitle": "لوحة التحكم",
+  "statusRunning": "قيد التشغيل",
+  "statusStopped": "متوقف",
+  "start": "تشغيل",
+  "stop": "إيقاف",
+  "events": "الأحداث",
+  "settings": "الإعدادات",
+  "botUrl": "عنوان الخادم"
 }

@@ -21,9 +21,9 @@ jobs:
           cache: true
       - name: Create android and deps
         run: |
-          if [ ! -d android ]; then flutter create .; fi
+          if [ ! -d android ]; then flutter create --platforms=android --no-overwrite .; fi
           flutter pub get
-          flutter gen-l10n || true
+          if [ -f l10n.yaml ]; then flutter gen-l10n; fi
       - name: Build APK
         run: |
           flutter build apk -t lib/main.dart --release
@@ -34,3 +34,4 @@ jobs:
         with:
           name: boot-coin-mooroo-apk
           path: dist/boot-coin-mooroo-release.apk
+
